@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# disable access to config folder and files 
+RewriteRule ^assets/ - [F]
+RewriteRule ^css/ - [F]
+RewriteRule ^js/ - [F]
+RewriteRule ^views/ - [F]
+
+ErrorDocument 404 /todoportfolio/Page404.html
+
