@@ -27,6 +27,9 @@ if (!empty($_POST)) {
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             $_SESSION["error"][] = "L'adresse email est incorrecte";
         }
+        if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $_POST['password'])){
+            $_SESSION['error'][] = "Le mot de passe doit contenir au moins 8 caractères dont une minuscule, une majuscule, un chiffre et un caractère spécial";
+        } 
         //Si il y a une erreur enregistrée dans la session, on arrête
         if ($_SESSION["error"] === []) {
             //On va hasher le mot de passe    
