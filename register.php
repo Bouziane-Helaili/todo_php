@@ -32,7 +32,7 @@ if (!empty($_POST)) {
             //On va hasher le mot de passe    
             $pass = password_hash($_POST["password"], PASSWORD_ARGON2ID);
             // On enregistre dans la BDD
-            require_once "connect.php";
+            require_once "partials/connect.php";
             //Vérifier si le mail est déjà dans la BD 
             $stmt = $pdo->prepare("SELECT * FROM `user` WHERE `email` = ?");
             $stmt->execute(array($_POST["email"]));

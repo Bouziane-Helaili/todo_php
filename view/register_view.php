@@ -6,7 +6,7 @@
 
     <form action="register.php" method="post">
         <div class="mt-4">
-            <label for="name">Nom</label>
+            <label for="name">Prénom</label>
         </div>
         <input type="name" name="name" id="name" required><br>
         <div class="mt-4">

@@ -1,6 +1,6 @@
 <?php
 require_once 'partials/_start_session.php';
-require_once 'partials/_check_is_logged.php';
+// require_once 'partials/_check_is_not_logged.php';
 
 // session_start();
 //Vérification de la présence de user dans la session, sinon redirection
